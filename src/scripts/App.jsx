@@ -1,10 +1,10 @@
 import './App.css';
-import Header from './components/Header';
-import Navigation from './components/Navigation';
-import Home from './components/Home';
-import Men from './components/Men';
-import { menItems } from './components/menItems';
-import Footer from './components/Footer';
+import Header from '../components/Header';
+import Navigation from '../components/Navigation';
+import Home from '../pages/Home';
+import Men from '../pages/Men';
+import { menItems } from '../components/menItems';
+import Footer from '../components/Footer';
 import { Route, Routes, Link } from 'react-router-dom';
 
 function App() {
