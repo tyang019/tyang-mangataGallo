@@ -9,21 +9,21 @@ export default function Navigation() {
           </li>
           <li>
             <Link to="/men">
-              Men
+              Men's
           </Link>
           </li>
           <li>
-            <Link>
-              Women
+            <Link to='/women'>
+              Women's
           </Link>
           </li>
           <li>
-            <Link>
+            <Link to='/product'>
               Products
             </Link>
             </li>
           <li>
-            <Link>
+            <Link to='contact'>
                 Contact
             </Link>
           </li>

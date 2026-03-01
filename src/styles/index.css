@@ -2,9 +2,16 @@ header{
   
 }
 .product-card{
-  width: 100%;
-  height: auto; 
-  object-fit: cover;
+  min-height: 380px;     /* card height */
+  border-radius: 12px;
+  overflow: hidden; 
+  width: min(100%, 280px); 
+}
+.product-card img {
+  width: 100%;           /* fill card width */
+  height: 220px;         /* image display height */
+  object-fit: contain;     /* crops image nicely instead of stretching */
+  display: block;
 }
 .search-bar{
   border-radius: 2rem;
@@ -27,6 +34,7 @@ header{
   display: flex;
   align-items: center;
   width: fit-content;
+  
 }
 .description{
   display: flex;
@@ -108,9 +116,6 @@ ul {
     padding: 1rem;
     border-radius: 2rem;
     }
-}
-.three-articles{
-  background-color: green;
 }
 li a:hover{
   background-color: rgb(249, 222, 179);
@@ -200,9 +205,12 @@ div{
   max-width: 100%;
   height: auto;
 }
-.three_images, .christmas, .specials{
-  height: 15rem;
+.three_images{
+  width: 100%;
+  object-fit: cover;
   padding: 1rem;
+  overflow: hidden; 
+  aspect-ratio: 1 / 1;
 }
 section{
   display: flex;

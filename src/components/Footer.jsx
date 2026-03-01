@@ -8,7 +8,7 @@ export default function Footer(){
         </div>
           <hr/>
         <div>
-          <p className="copyright">@M.G. Mangata Gallo Copyright</p>
+          <p className="copyright">@Mangata Gallo Copyright</p>
         </div>
       </footer>
   )

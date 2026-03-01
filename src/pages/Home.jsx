@@ -28,7 +28,7 @@ export default function Home(){
           <h1>Our Collections</h1>
           <button>Shop Now</button>
         </div>
-        <article className='three_articles'>
+        <article>
         <div className="container_description">
           <img className="three_images" src={featured} />
           <img 
