@@ -18,8 +18,8 @@ export default function Navigation() {
           </Link>
           </li>
           <li>
-            <Link to='/product'>
-              Products
+            <Link to='/accessories'>
+              Accessories
             </Link>
             </li>
           <li>

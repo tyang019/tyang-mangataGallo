@@ -72,7 +72,7 @@ body{
 .overlay-text{
   position: absolute;        /* positioned relative to .hero */
   top: 47%;                  /* center vertically */
-  left: 55%;                 /* center horizontally */
+  left: 45%;                 /* center horizontally */
   transform: translate(5%,); /* perfect centering */
   color: white;
   text-shadow: 0 2px 6px rgba(0,0,0,0.6);

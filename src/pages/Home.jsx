@@ -16,7 +16,7 @@ export default function Home(){
             src={banner1} alt="banner" 
             />
             <div className='overlay-text'>
-              Exquisite Jewelry Collection
+              Exquisite Jewelry & Clothing Collection
             </div>
           </div>
         </article>
