@@ -8,8 +8,8 @@ export default function Header(){
     <header>
         <div className="search-bar-position">
           <img className="logo" src={logo} alt="logo" />
-          <input id="input" className="search-bar" placeholder="Search" type="text" />
-          <button type="button" className="search-button">Search</button>
+          {/* <input id="input" className="search-bar" placeholder="Search" type="text" />
+          <button type="button" className="search-button">Search</button> */}
       </div>
     </header>
   )
