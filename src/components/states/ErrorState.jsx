@@ -1,4 +1,4 @@
-export default function ErrorState({message, onRetry}){
+export default function ErrorState({ message, onRetry }) {
   return (
     <div className="status-card status-card-error" role="alert">
       <p>{message}</p>

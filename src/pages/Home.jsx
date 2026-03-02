@@ -5,10 +5,9 @@ import christmas from '/src/assets/christmas.jpg';
 import off from '/src/assets/off.jpg';
 
 export default function Home(){
-  return(
+  return (
     <>
     <h2 id="search-result"></h2>
-      <h1 class="banner"></h1>
       <section>
         <article>
           <div className="image-container">

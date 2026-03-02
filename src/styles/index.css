@@ -260,3 +260,55 @@ footer{
 .status-card-error {
   border: 1px solid #d9534f;
 }
+
+.nav_bar > li {
+  position: relative;
+}
+
+.dropdown-trigger {
+  color: beige;
+  cursor: pointer;
+  padding: 0.3rem;
+}
+
+.dropdown-item:hover .dropdown-trigger {
+  background-color: rgb(249, 222, 179);
+  color: black;
+  border-radius: 2rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  min-width: 170px;
+  list-style: none;
+  padding: 0.5rem;
+  margin: 0;
+  background: #111;
+  border-radius: 0.5rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.4rem;
+  z-index: 30;
+}
+
+.dropdown-item:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  color: white;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.4rem;
+}
+
+.dropdown-menu a:hover {
+  background: rgb(249, 222, 179);
+  color: black;
+}

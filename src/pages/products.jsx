@@ -15,7 +15,6 @@ function ProductCard({ product }) {
           <p className="product-price">${product.price}</p>
           <button type="button">Add to cart</button>
         </div>
-        
       </div>
     </article>
   );
@@ -23,8 +22,10 @@ function ProductCard({ product }) {
 export default function Products() {
   const [searchParams, setSearchParams] = useSearchParams();
   const defaultCategory = searchParams.get('category') || '';
-  const [searchTerm, setSearchTerm] = useState('');
+  const defaultQuery = searchParams.get('q') || '';
+  const [searchTerm, setSearchTerm] = useState(defaultQuery);
   const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
+
   const { products, categories, totalProducts, loading, error, retry } = useProducts(selectedCategory);
 
   const filteredProducts = useMemo(() => {
