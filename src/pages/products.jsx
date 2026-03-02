@@ -4,10 +4,11 @@
 function ProductCard({ product }) {
   return (
     <article className="product-card">
-      <h2>{product.name}</h2>
       <img src={product.image} />
-      <p>${product.price}</p>
-      <button style={{height: "2rem", fontSize: "15px"}}>Add to cart</button>
+      <div className="form">
+        <h2 style={{fontSize: "17px"}}>{product.name}</h2>
+        <p>${product.price}</p>
+      </div>
     </article>
   );
 }

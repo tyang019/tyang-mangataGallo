@@ -1,15 +1,22 @@
 header{
   
 }
+.form{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
 .product-card{
-  min-height: 380px;     /* card height */
+  padding-top: 1rem;
+  min-height: 280px; 
+  max-height: 380px;    /* card height */
   border-radius: 12px;
   overflow: hidden; 
-  width: min(100%, 280px); 
+  width: min(100%, 380px); 
 }
 .product-card img {
   width: 100%;           /* fill card width */
-  height: 220px;         /* image display height */
+  height: 250px;         /* image display height */
   object-fit: contain;     /* crops image nicely instead of stretching */
   display: block;
 }
