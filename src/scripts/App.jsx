@@ -2,32 +2,24 @@ import '../App.css';
 import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import Home from '../pages/Home';
-import { menItems } from '../components/menItems';
-import { womenItems } from '../components/womenItems';
 import { accessoryItems } from '../components/Accessory';
 import Footer from '../components/Footer';
-import { Route, Routes, Link } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Products from '../pages/products';
 
 function App() {
   return (
     <>
-    {/* {Global Variables} */}
       <Header/>
       <Navigation />
-
-    {/* {Routes} */}
       <Routes>
-        <Route path="/home" element={<Home />}/>
-        <Route path='/men' element={<Products items={menItems} />} />
-        <Route path='/women' element={<Products items={womenItems} />} />
-        <Route path='/product' element={<Products/>}/>
+        <Route path="/" element={<Navigate to="/home" replace />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/products" element={<Products />} />
         <Route path='/accessories' element={<Products items={accessoryItems}/>}/>
       </Routes>
-
-    {/* {Footer} */}
       <Footer/>
     </>
-  )
+  );
 }
 export default App

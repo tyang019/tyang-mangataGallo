@@ -6,16 +6,9 @@ export default function Header(){
   return(
     <header>
         <div className='search-bar-position'>
-        <img 
-          className="logo" 
-          src={logo}
-          alt="logo"
-        />
-        <input 
-          id="input" className="search-bar"
-          placeholder="Search" type="text"
-          />
-            <button className="search-button">Search</button>
+        <img className="logo" src={logo}alt="logo"/>
+        <input id="input" className="search-bar" placeholder="Search" type="text"/>
+          <button className="search-button">Search</button>
         </div>
     </header>
   )
