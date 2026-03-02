@@ -5,10 +5,10 @@ export default function Navigation() {
    <nav>
       <ul className="nav_bar">
         <li><Link to="/home">Home</Link></li>
-        <li><Link to="/products">All Products</Link></li>
+        <li><Link to="/products">Jewelry</Link></li>
         <li><Link to="/products?category=men's%20clothing">Men's</Link></li>
         <li><Link to="/products?category=women's%20clothing">Women's</Link></li>
-        <li><Link to="/products?category=jewelery">Accessories</Link></li>
+        <li><Link to="/products?category=jewelery">Contact</Link></li>
       </ul>
     </nav>
   );
