@@ -5,7 +5,7 @@ import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import Footer from '../components/Footer';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import Product from '../pages/products';
+import Products from '../pages/products';
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/products" element={<Product />} />
+        <Route path="/products" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer/>

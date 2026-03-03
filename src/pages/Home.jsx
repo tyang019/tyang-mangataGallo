@@ -8,20 +8,18 @@ export default function Home(){
   return (
     <>
     <h2 id="search-result"></h2>
-      <section>
+      <section className='home-section'>
         <article>
           <div className="image-container">
+            <Link to="/products">
+          <button type="button" className="order">Order</button>
+        </Link>
             <img className="banner" src={banner1} alt="banner" />
             <div className="overlay-text">Exquisite Jewelry & Clothing Collection</div>
           </div>
         </article>
-         <Link to="/products">
-          <button type="button" className="order">Order</button>
-        </Link>
-      </section>
 
-      <section>
-        <div>
+        <div className='home-section'>
           <h1>Our Collections</h1>
            <Link to="/products">
             <button type="button">Shop Now</button>
