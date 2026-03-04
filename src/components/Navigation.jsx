@@ -11,6 +11,6 @@ export default function Navigation() {
         <li><Link to="/products?category=women's%20clothing">Women's</Link></li>
         <li><Link to="/contact">Contact</Link></li>
       </ul>
-    </nav>
+  </nav>
   );
 };

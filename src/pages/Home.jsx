@@ -11,9 +11,9 @@ export default function Home(){
       <section className='home-section'>
         <article>
           <div className="image-container">
-            <Link to="/products">
+            {/* <Link to="/products">
           <button type="button" className="order">Order</button>
-        </Link>
+        </Link> */}
             <img className="banner" src={banner1} alt="banner" />
             <div className="overlay-text">Exquisite Jewelry & Clothing Collection</div>
           </div>

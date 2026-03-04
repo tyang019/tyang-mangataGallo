@@ -68,13 +68,13 @@ body{
 .overlay-text{
   position: absolute;        /* positioned relative to .hero */
   top: 47%;                  /* center vertically */
-  left: 45%;                 /* center horizontally */
-  transform: translate(5%,); /* perfect centering */
+  left: 48%;                 /* center horizontally */
+  transform: translate(5%); /* perfect centering */
   color: white;
   text-shadow: 0 2px 6px rgba(0,0,0,0.6);
   padding: 0.6rem 1rem;
   border-radius: 6px;
-  font-size: clamp(1rem, 2.5vw, 1.8rem); /* responsive font size */
+  font-size: clamp(0.5rem, 2vw, 1.8rem); /* responsive font size */
   z-index: 2;
   pointer-events: none;  
 }
@@ -143,16 +143,14 @@ button:hover{
   font-size: 16px;
   cursor: pointer;
 }
-.order{
+/* .order{
   position: absolute;
   top: 30%;                  /* center vertically */
-  left: 85%;                 /* center horizontally */
-  transform: translate(5%);
+  /* left: 50%;                 /* center horizontally */
+  /* transform: translate(5%);
   font-size: clamp(1rem, 2.5vw, 1.8rem);
   background-color: rgb(219, 219, 231);
-  color: black;
-
-}
+  color: black; */ 
 a{
   color: beige; 
   text-decoration: none;
@@ -169,6 +167,7 @@ a:hover{
 }
 .home-section{
   padding: 1rem;
+  width: 100%;
 }
 .mini_logo{
   height: 4rem;
@@ -230,6 +229,7 @@ footer{
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: 1rem;
   align-items: stretch;
+  padding-bottom: 1rem;
 }
 
 .product-content {

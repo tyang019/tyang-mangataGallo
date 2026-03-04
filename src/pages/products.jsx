@@ -48,7 +48,8 @@ export default function Products () {
   <section className="product-grid">
     {products.map((product) => (
   <ProductCard key={product.id} product={product} />
-))}
+)
+)}
     </section>
   );
 }

@@ -1,4 +1,4 @@
-export default function ProductCard(product){
+export default function ProductCard({product}){
   return (
     <article className="product-card">
        <div className="product-content">
