@@ -6,9 +6,9 @@ export default function Navigation() {
    <nav>
       <ul className="nav_bar">
         <li><Link to="/home">Home</Link></li>
-        <li><Link to="/products">Jewelry</Link></li>
-        <li><Link to="/products?category=men's%20clothing">Men's</Link></li>
-        <li><Link to="/products?category=women's%20clothing">Women's</Link></li>
+        <li><Link to="/category/jewelery">Jewelry</Link></li>
+        <li><Link to="/category/men's clothing">Men's</Link></li>
+        <li><Link to="/category/women's clothing">Women's</Link></li>
         <li><Link to="/contact">Contact</Link></li>
       </ul>
   </nav>

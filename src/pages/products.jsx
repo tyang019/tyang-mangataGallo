@@ -1,48 +1,48 @@
 import {useState, useEffect} from 'react';
-const API_BASE_URL = 'https://fakestoreapi.com/products';
+import { useParams } from "react-router-dom";
 import LoadingState from '../components/states/LoadingState';
 import ErrorState from '../components/states/ErrorState';
 import ProductCard from '../components/ProductCard';
+const API_BASE_URL = 'https://fakestoreapi.com/products';
 
 export default function Products () {
   
   const [products, setProducts] = useState([]); //hook passes an array
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const {category} = useParams();
+
 
   useEffect( () => {
-    console.log("Fetching...");
 
     const fetchProducts = async () => {
       try{
-
         setLoading(true);
         setError(null);
 
-        const response = await fetch(API_BASE_URL);
+        const url = category 
+        ? `https://fakestoreapi.com/products/category/${category}`
+        : {API_BASE_URL};
+
+        const response = await fetch(url);
         const data = await response.json();
 
         if(!response.ok){
           console.log('Failed to fetch products');
           return;
         }
-
         setProducts(data);
-        console.log("Data received:", data);
-
       }catch (error) {
         setError(error);
       }finally {
         setLoading(false);
-        console.log("Loading finished");
       }
      }
      fetchProducts();
-  }, [])
+  }, [category])
 
   if (loading) return <LoadingState />;
   if (error) return <ErrorState message={error} />;
-
 
   return (
   <section className="product-grid">

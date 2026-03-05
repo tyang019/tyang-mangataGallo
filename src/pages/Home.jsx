@@ -21,7 +21,7 @@ export default function Home(){
 
         <div className='home-section'>
           <h1>Our Collections</h1>
-           <Link to="/products">
+           <Link to="/category/jewelery">
             <button type="button">Shop Now</button>
           </Link>
         </div>

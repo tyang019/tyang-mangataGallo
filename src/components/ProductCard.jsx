@@ -6,7 +6,7 @@ export default function ProductCard({product}){
           <h3>{product.title}</h3>
         </div> 
         <div className="form">
-          <p className="product-price">{product.price}</p>
+          <p className="product-price">${product.price}</p>
           <button>Add to cart</button>
         </div>
     </article>
