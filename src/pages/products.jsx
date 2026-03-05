@@ -12,20 +12,29 @@ export default function Products () {
   const [error, setError] = useState(null);
   const {category} = useParams();
 
+  const product = { title: 'Locket', price: 299.99 };
+fetch('https://fakestoreapi.com/products', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(product)
+})
+  .then(response => response.json())
+  .then(data => console.log(data));
 
   useEffect( () => {
-
     const fetchProducts = async () => {
       try{
         setLoading(true);
         setError(null);
 
         const url = category 
-        ? `https://fakestoreapi.com/products/category/${category}`
+        ? `https://fakestoreapi.com/products/category/${category}` 
         : {API_BASE_URL};
 
-        const response = await fetch(url);
+        const response = await fetch(url)
+
         const data = await response.json();
+        console.log(data); 
 
         if(!response.ok){
           console.log('Failed to fetch products');
