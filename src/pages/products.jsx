@@ -5,15 +5,16 @@ import ErrorState from '../components/states/ErrorState';
 import ProductCard from '../components/ProductCard';
 const API_BASE_URL = 'https://fakestoreapi.com/products';
 
+
 export default function Products () {
   
-  const [products, setProducts] = useState([]); //hook passes an array
+  const [products, setProducts] = useState([]); //products passes an array as the initial value
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const {category} = useParams();
 
   const product = { title: 'Locket', price: 299.99 };
-fetch('https://fakestoreapi.com/products', {
+  fetch('https://fakestoreapi.com/products', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify(product)

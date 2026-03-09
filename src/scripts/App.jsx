@@ -4,8 +4,9 @@ import Navigation from '../components/Navigation';
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import Footer from '../components/Footer';
-import { BrowserRouter as Navigate, Route, Routes } from 'react-router-dom';
+import {Navigate, Route, Routes } from 'react-router-dom';
 import Products from '../pages/products';
+import User from '../pages/User';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/category/:category" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path='/user' element={<User />} />
       </Routes>
       
       <Footer/>

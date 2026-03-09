@@ -7,7 +7,7 @@ export default function ProductCard({product}){
         </div> 
         <div className="form">
           <p className="product-price">${product.price}</p>
-          <button>Add to cart</button>
+          <button>Add to bag</button>
         </div>
     </article>
   );
