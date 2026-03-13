@@ -5,29 +5,32 @@ import { Link } from "react-router-dom";
 
 export default function Header(){
   return(
-    <header>
-      <div style=
-      {{
-        height: "35px", 
-        display: "flex", 
-        justifyContent: "end",
-        cursor: "pointer"
-        }}>
-          <img style={{display:"flex", marginRight: "15px" }} src={shopBag} alt="shopping-bag"/>
-          <Link to="/user">
-            <img 
-              style={{height: "35px"}}
-              src={user} 
-              alt="user"
-            />
-          </Link>
-      </div>
+       <header>
+        <div className="header_main">
+          <div className="header_logo">
+            <img className="logo" src={logo} alt="logo"/>
+          </div>
+          
+            <div className="search-bar-position">
+                <input className="search-bar" id="input" placeholder="Search" type="text" />
 
-      <div className="search-bar-position">
-        <img className="logo" src={logo} alt="logo" />
-          <input id="input" className="search-bar" placeholder="Search" type="text" />
-          <button type="button" className="search-button">Search</button>
-      </div>
+                <button className="search-button" type="button" >Search</button>
+                <Link to="/bag">
+                    <img style={{ 
+                      height: "30px",
+                      marginRight: "15px" 
+                      }} src={shopBag} alt="shopping-bag"/>
+                  </Link>
+                  <Link to="/user">
+                    <img 
+                      style={{height: "30px"}}
+                      src={user} 
+                      alt="user"
+                    />
+                  </Link>
+              </div>
+            </div>
     </header>
+   
   )
 }

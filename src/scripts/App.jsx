@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import {Navigate, Route, Routes } from 'react-router-dom';
 import Products from '../pages/products';
 import User from '../pages/User';
+import Bag from '../pages/Bag';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/category/:category" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
         <Route path='/user' element={<User />} />
+        <Route path='/bag' element={<Bag />} />
       </Routes>
       
       <Footer/>

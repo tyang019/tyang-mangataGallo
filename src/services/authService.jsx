@@ -9,6 +9,7 @@ export async function loginUser(email, password) {
     const userMatched = users.find(
       (user) => user.email === email && user.password === password
     );
+    
     if(!userMatched){
       throw new Error("Invalid email or password.");
     }

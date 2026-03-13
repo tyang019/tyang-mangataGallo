@@ -1,3 +1,7 @@
+.header_main{ 
+  display: flex;
+  justify-content: end;
+}
 .form{
   display: flex;
   justify-content: space-between;
@@ -21,17 +25,19 @@
   border-radius: 2rem;
   border: none;
   padding: 0.5rem;
+  height: 1rem;
   width: 12rem;
   box-shadow: 1px 1px 5px black;
 }
 .search-bar-position{
   display: flex;
-  align-items: end;
+
 }
 .search-button{
   font-size: 15px;
   padding: 0.5rem;
-  width: 5rem;
+  width: auto;
+  height: 2.2rem;
   margin-left: 1rem;
 }
 .container_description{
@@ -80,17 +86,22 @@ body{
 h1{
   text-align: center;
 }
+.header_logo{
+  display: flex;
+  margin-right: auto;
+}
 .logo{
-  width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  /* width: 100%;
+  height: auto; Maintain aspect ratio */
   /* For responsive design, viewport units or max-width */ 
-  width: 60vw; 
+  width: 35vw; 
+  max-height: 9vh;
 }
 
 ul {
   display: flex;
   justify-content: space-around;
-  font-size: 1.5rem;
+  font-size: 1.2vw;
 }
 @media(max-width: 768px){
     ul{
@@ -124,7 +135,7 @@ button{
   border: none;
   padding: 0.5rem;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 15px;
   background-color:black;
   color: white;
   font-family: Georgia, 'Times New Roman', Times, serif;

@@ -25,13 +25,13 @@ export default function Home(){
             <button type="button">Shop Now</button>
           </Link>
         </div>
-        <article>
+        <div>
         <div className="container_description">
             <img className="three_images" src={featured} alt="featured collection" />
             <img className="three_images" src={christmas} alt="holiday collection" />
             <img className="three_images" src={off} alt="promotional collection" />
           </div>
-        </article>
+        </div>
       </section>
     </>
   )
