@@ -13,14 +13,14 @@ export default function Products () {
   const [error, setError] = useState(null);
   const {category} = useParams();
 
-  const product = { title: 'Locket', price: 299.99 };
-  fetch('https://fakestoreapi.com/products', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify(product)
-})
-  .then(response => response.json())
-  .then(data => console.log(data));
+//   const product = { title: 'Locket', price: 299.99 };
+//   fetch('https://fakestoreapi.com/products', {
+//   method: 'POST',
+//   headers: { 'Content-Type': 'application/json' },
+//   body: JSON.stringify(product)
+// })
+//   .then(response => response.json())
+//   .then(data => console.log(data));
 
   useEffect( () => {
     const fetchProducts = async () => {

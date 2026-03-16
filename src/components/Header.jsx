@@ -18,6 +18,7 @@ export default function Header(){
                 <Link to="/bag">
                     <img style={{ 
                       height: "30px",
+                      marginLeft: "15px",
                       marginRight: "15px" 
                       }} src={shopBag} alt="shopping-bag"/>
                   </Link>

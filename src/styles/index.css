@@ -13,15 +13,15 @@
   max-height: 480px;    /* card height */
   border-radius: 12px;
   overflow: hidden; 
-  width: min(100%, 380px); 
+  width: min(100%, 380px);
 }
 .product-card img {
   width: 100%;           /* fill card width */
-  height: 250px;         /* image display height */
+  height: 270px;         /* image display height */
   object-fit: contain;     /* crops image nicely instead of stretching */
   display: block;
 }
-.search-bar{
+.search-bar, input{
   border-radius: 2rem;
   border: none;
   padding: 0.5rem;
@@ -31,7 +31,6 @@
 }
 .search-bar-position{
   display: flex;
-
 }
 .search-button{
   font-size: 15px;
