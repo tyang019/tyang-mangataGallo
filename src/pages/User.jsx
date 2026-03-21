@@ -44,13 +44,14 @@ export default function User(){
     if (loading) return <LoadingState />
 
   return (
-    <div>
+    <article className="status-card">
     {error && <ErrorState message={error} />}
 
     <form onSubmit={handleSubmit}>
-      <h1>Login</h1>
-      <label htmlFor="email">Email Address</label>
-      <input 
+      <h1>Account Sign In</h1>
+      <label>Email</label><input 
+      htmlFor="email"
+        placeholder="Email Address"
         id="email"
         name="email" 
         type="text" 
@@ -58,8 +59,10 @@ export default function User(){
         value={loginData.email}
         onChange={handleChange}
       />
-      <label htmlFor="password">Password</label>
-      <input 
+
+      <label>Password</label><input 
+      htmlFor="password"
+      placeholder="Password"
         id="password"
         name="password" 
         type="password" 
@@ -69,9 +72,9 @@ export default function User(){
         />
       <button type="submit">Login</button>
     </form>
-
+      <hr />
       <form >
-        <h1>Register an Account</h1>
+        <h1>Create an Account</h1>
         <label>First Name: </label>
         <input 
           type="text" 
@@ -94,6 +97,6 @@ export default function User(){
         />
         <button>Register</button>
       </form>
-    </div>
+    </article>
   );
 }

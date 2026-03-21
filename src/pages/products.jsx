@@ -4,6 +4,7 @@ import LoadingState from '../components/states/LoadingState';
 import ErrorState from '../components/states/ErrorState';
 import ProductCard from '../components/ProductCard';
 const API_BASE_URL = 'https://fakestoreapi.com/products';
+import Banner from '../components/Banner';
 
 
 export default function Products () {
@@ -55,11 +56,20 @@ export default function Products () {
   if (error) return <ErrorState message={error} />;
 
   return (
-  <section className="product-grid">
+  <div> 
+    {category === "jewelery" && (
+      <Banner 
+        title="Mangata & Gallo's Jewelry"
+        
+        subtitle="Our mission is to offer customers a refined shopping experience where jewelry compliment clothing in harmony"/>
+    )}
+    <section className="product-grid">
     {products.map((product) => (
   <ProductCard key={product.id} product={product} />
 )
 )}
     </section>
+  </div>
+  
   );
 }

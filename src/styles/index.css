@@ -7,13 +7,23 @@
   justify-content: space-between;
   padding: 0.5rem;
 }
+input{
+  display: flex;
+  margin: auto;
+  margin-top: 10px;
+}
+.jewelry_banner{
+  background-color: rgb(132, 132, 132);
+}
 .product-card{
   padding-top: 0.5rem;
   min-height: 280px; 
   max-height: 480px;    /* card height */
   border-radius: 12px;
   overflow: hidden; 
-  width: min(100%, 380px);
+  width: max(100%, 380px);
+  color: rgb(118, 113, 113);
+
 }
 .product-card img {
   width: 100%;           /* fill card width */
@@ -47,11 +57,11 @@
 article{
   background-color: white;
   border-radius: 10px;
-  box-shadow: 1px 2px 7px black;
+  box-shadow: 1px 1px 4px black;
   object-fit: cover;
 }
 body{
-    font-family: Bell MT;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #f7f7f7;
 }
 .image-container{
@@ -208,10 +218,6 @@ footer{
 
 
 
-.products-page {
-  width: min(1100px, 95%);
-  margin: 0 auto;
-}
 
 .catalog-controls {
   background: #fff;
@@ -235,7 +241,7 @@ footer{
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: 1rem;
   align-items: stretch;
   padding-bottom: 1rem;
@@ -250,11 +256,6 @@ footer{
   min-height: 50px;
 }
 
-.product-category {
-  color: #666;
-  text-transform: capitalize;
-}
-
 .product-price {
   font-weight: 700;
 }
@@ -266,7 +267,9 @@ footer{
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   text-align: center;
 }
-
+form{
+  padding: 1rem;
+}
 .status-card-error {
   border: 1px solid #d9534f;
 }
