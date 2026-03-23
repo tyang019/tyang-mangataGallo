@@ -15,12 +15,16 @@ export default function Header(){
                 <input className="search-bar" id="input" placeholder="Search" type="text" />
 
                 <button className="search-button" type="button" >Search</button>
-                <Link to="/bag">
-                    <img style={{ 
-                      height: "30px",
-                      marginLeft: "15px",
-                      marginRight: "15px" 
-                      }} src={shopBag} alt="shopping-bag"/>
+                  <Link className="relative" to="/bag">
+                    <img 
+                      style={{ 
+                        height: "30px",
+                        marginLeft: "15px",
+                        marginRight: "15px" 
+                        }} 
+                      src={shopBag} 
+                      alt="shopping-bag"
+                      />
                   </Link>
                   <Link to="/user">
                     <img 

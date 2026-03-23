@@ -44,10 +44,10 @@ export default function User(){
     if (loading) return <LoadingState />
 
   return (
-    <article className="status-card">
+    <article >
     {error && <ErrorState message={error} />}
 
-    <form onSubmit={handleSubmit}>
+    <form  onSubmit={handleSubmit}>
       <h1>Account Sign In</h1>
       <label>Email</label><input 
       htmlFor="email"
