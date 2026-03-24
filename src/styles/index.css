@@ -78,7 +78,13 @@ body{
   margin-right: 3rem;
   font-size: 2rem;
 }
-
+.about_section{
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 1rem;
+  padding: 1rem;
+}
 .overlay-text{
   position: absolute;        /* positioned relative to .hero */
   top: 47%;                  /* center vertically */

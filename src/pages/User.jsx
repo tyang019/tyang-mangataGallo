@@ -70,9 +70,15 @@ export default function User(){
         value={loginData.password}
         onChange={handleChange}
         />
-      <button type="submit">Login</button>
+      <button style={{
+        marginTop: "1rem"
+      }} type="submit">Login</button>
+      
     </form>
-      <hr />
+      <hr style={{
+        width: "40rem",
+        marginTop: "1rem"
+      }}/>
       <form >
         <h1>Create an Account</h1>
         <label>First Name: </label>
@@ -95,7 +101,9 @@ export default function User(){
           type="text" 
           required 
         />
-        <button>Register</button>
+        <button style={{
+          marginTop: "1rem"
+        }}>Register</button>
       </form>
     </article>
   );

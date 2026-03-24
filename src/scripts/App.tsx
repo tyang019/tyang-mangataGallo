@@ -1,8 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BagProvider from './path/to/BagProvider'; // Adjust the path as necessary
-import './index.css';
-
 
 const App = () => {
     return (

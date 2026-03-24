@@ -2,27 +2,45 @@ import { useEffect, useState } from "react";
 import LoadingState from "../components/states/LoadingState";
 import ErrorState from "../components/states/ErrorState";
 
+const API_KEY = "Ad4REsxepmVq5eUcROadraBPgxjCXcquX2JxzZuHbVZbNgBBijjrQ7ib"; 
+
 export default function Contact() {
     
    const [photos, setPhotos] = useState([]);
    const [loading, setLoading] = useState(false);
    const [error, setError] = useState(null);
+   const paragraphs = [
+    "Mangata & Gallo is a modern luxury brand dedicated to timeless design and refined craftsmanship. Founded with the vision of bringing together elegance and everyday wearability, our store offers a carefully curated selection of jewelry and clothing that celebrates both sophistication and individuality.",
+    "At Mangata & Gallo, we believe that style should feel effortless yet meaningful. Every piece we offer is chosen to help our customers express confidence, beauty, and personal identity through fashion."
+   ]
+   const paragraphs2 = [
+    "True luxury lies in the harmony between artistry and simplicity. Our collections are inspired by the idea that jewelry and clothing should complement one another, creating a complete expression of style.",
+    "From delicate necklaces and statement rings to finely crafted garments, Mangata & Gallo blends modern fashion with timeless elegance. Each item is designed to elevate everyday moments into something memorable."
+   ]
+   const title = [
+    "Our Story",  
+    "Our Philosophy"
+   ]
 
 useEffect( () => {
    const fetchPhotos = async () => {
     try {
       setLoading(true)
-      const response = await fetch("https://picsum.photos/v2/list?page=1&limit=1")
+      const response = await fetch("https://api.pexels.com/v1/search?query=jewelry&per_page=2", {
+        headers: {
+          "Authorization": API_KEY
+        }
+      })
         
       const data = await response.json();
-      setPhotos(data);
+      setPhotos(data.photos);
 
     } catch (error) {
       setError(error);
       console.log("Fetched photo fail");
     }finally{
       setLoading(false)
-    }
+      }
    }
    fetchPhotos();
 }, [])
@@ -31,40 +49,36 @@ if(loading) return <LoadingState />
 if(error) return <ErrorState />
     
   return (
-    <main className="status-card" style={{
-      marginTop: '2rem' 
-      }}
+    <main className="status-card" 
+      style={{
+        marginTop: '1rem' 
+        }}
       >
-      <h1>Our Story</h1>
-      <div style={{
-        display: "flex"
-      }}>
-
-      {photos.map ((photo) => (
+      {/* <h1>Our Story</h1> */}
+      <div className="about_section">
+      {photos.map ((photo, index) => ( 
+        <div key={photo.id}
+        style={{
+          display: "flex"
+        }}>
+          <div>
+            <h2>{title[index]}</h2>
+            <p>{paragraphs[index]}</p>
+            <p>{paragraphs2[index]}</p>
+          </div>
         <img 
           style={{
             height: "auto",
             width: "100%", 
             maxWidth: "380px",
             margin: "10px", 
-            display: "flex"
+            display: "block",             
           }}
-          key={photo.id} 
-          src={photo.download_url} 
-          alt="About us photo" 
+          src={photo.src.medium} 
+          alt={photo.photographer}
           />
+        </div>
       ))}
-      <div style={{
-        display: "block",
-      }}>
-        <p>Mangata & Gallo is a modern luxury brand dedicated to timeless design and refined craftsmanship. Founded with the vision of bringing together elegance and everyday wearability, our store offers a carefully curated selection of jewelry and clothing that celebrates both sophistication and individuality.</p>
-        <p>At Mangata & Gallo, we believe that style should feel effortless yet meaningful. Every piece we offer is chosen to help our customers express confidence, beauty, and personal identity through fashion.</p>
-      </div>
-  </div>
-  <div>
-        <h1>Our Philosophy</h1>
-      <p>True luxury lies in the harmony between artistry and simplicity. Our collections are inspired by the idea that jewelry and clothing should complement one another, creating a complete expression of style.</p>
-      <p>From delicate necklaces and statement rings to finely crafted garments, Mangata & Gallo blends modern fashion with timeless elegance. Each item is designed to elevate everyday moments into something memorable.</p>
       </div>
 
       <h1>Contact Mangata & Gallo</h1>
