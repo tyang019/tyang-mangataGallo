@@ -15,7 +15,7 @@ export default function Contact() {
    ]
    const paragraphs2 = [
     "True luxury lies in the harmony between artistry and simplicity. Our collections are inspired by the idea that jewelry and clothing should complement one another, creating a complete expression of style.",
-    "From delicate necklaces and statement rings to finely crafted garments, Mangata & Gallo blends modern fashion with timeless elegance. Each item is designed to elevate everyday moments into something memorable."
+    "From delicate necklaces and statement rings to finely crafted floral garments, Mangata & Gallo blends modern fashion with timeless elegance. Each item is designed to elevate everyday moments into something memorable."
    ]
    const title = [
     "Our Story",  
@@ -31,10 +31,9 @@ useEffect( () => {
           "Authorization": API_KEY
         }
       })
-        
+      
       const data = await response.json();
-      setPhotos(data.photos);
-
+      setPhotos([...data.photos]);
     } catch (error) {
       setError(error);
       console.log("Fetched photo fail");
@@ -59,7 +58,8 @@ if(error) return <ErrorState />
       {photos.map ((photo, index) => ( 
         <div key={photo.id}
         style={{
-          display: "flex"
+          display: "flex",
+          flexDirection: index % 2 === 0 ? "row" : "row-reverse" //if index === 0, 2, 4... then row, else row-reverse
         }}>
           <div>
             <h2>{title[index]}</h2>
