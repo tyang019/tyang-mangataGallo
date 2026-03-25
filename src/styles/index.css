@@ -7,10 +7,31 @@
   justify-content: space-between;
   padding: 0.5rem;
 }
-input{
+.wrapper_account{
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.account_structure{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  max-width: fit-content;
+  margin-bottom: 1rem; 
+}
+@media (max-width: 900px) {
+  .account_structure, form {
+    flex-direction: column; /* Stacks the inputs vertically */
+    max-width: 100%;        /* Allows it to fill the phone width */
+  }
+}
+input{
   margin: auto;
-  margin-top: 10px;
+}
+label{
+  font-size: 18px;
+  width: 100%;
 }
 .jewelry_banner{
   background-color: rgb(132, 132, 132);
@@ -37,6 +58,7 @@ input{
   padding: 0.5rem;
   height: 1rem;
   width: 12rem;
+  margin-top: 0.2rem;
   box-shadow: 1px 1px 5px black;
 }
 .search-bar-position{

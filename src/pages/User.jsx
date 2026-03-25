@@ -49,7 +49,9 @@ export default function User(){
 
     <form  onSubmit={handleSubmit}>
       <h1>Account Sign In</h1>
-      <label>Email</label><input 
+      <div className="wrapper_account">
+        <div className="account_structure">
+          <label>Email</label><input 
       htmlFor="email"
         placeholder="Email Address"
         id="email"
@@ -59,7 +61,6 @@ export default function User(){
         value={loginData.email}
         onChange={handleChange}
       />
-
       <label>Password</label><input 
       htmlFor="password"
       placeholder="Password"
@@ -70,37 +71,47 @@ export default function User(){
         value={loginData.password}
         onChange={handleChange}
         />
+        </div>
+      </div>
+      
       <button style={{
         marginTop: "1rem"
       }} type="submit">Login</button>
       
     </form>
+
       <hr style={{
-        width: "40rem",
+        maxWidth: "600px",
         marginTop: "1rem"
       }}/>
+
       <form >
         <h1>Create an Account</h1>
-        <label>First Name: </label>
-        <input 
-          type="text" 
-          required 
-        />
-        <label>Last Name: </label>
-        <input 
-          type="text" 
-          required 
-        />
-        <label>Email Address: </label>
-        <input 
-          type="text" 
-          required 
-        />
-        <label>Password: </label>
-        <input 
-          type="text" 
-          required 
-        />
+        <div className="wrapper_account">
+          <div className="account_structure">
+            <label>First Name: </label>
+              <input 
+                type="text" 
+                required 
+              />
+              <label>Last Name: </label>
+              <input 
+                type="text" 
+                required 
+              />
+              <label>Email Address: </label>
+              <input 
+                type="text" 
+                required 
+              />
+              <label>Password: </label>
+              <input 
+                type="text" 
+                required 
+              />
+          </div>
+        </div>
+
         <button style={{
           marginTop: "1rem"
         }}>Register</button>

@@ -8,7 +8,9 @@ export default function Header(){
        <header>
         <div className="header_main">
           <div className="header_logo">
-            <img className="logo" src={logo} alt="logo"/>
+            <Link to="/home">
+              <img className="logo" src={logo} alt="logo"/>
+            </Link>
           </div>
           
             <div className="search-bar-position">
