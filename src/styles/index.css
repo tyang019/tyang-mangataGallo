@@ -47,7 +47,6 @@ label{
   overflow: hidden; 
   width: max(100%, 380px);
   max-width: 100%;
-
   color: rgb(118, 113, 113);
 }
 .product-card img {

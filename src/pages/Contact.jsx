@@ -55,7 +55,7 @@ if(error) return <ErrorState />
       >
       {/* <h1>Our Story</h1> */}
       <div className="about_section">
-      {photos.map ((photo, index) => ( 
+      {photos.slice(0, 2).map ((photo, index) => ( 
         <div key={photo.id}
         style={{
           display: "flex",
@@ -70,10 +70,11 @@ if(error) return <ErrorState />
           style={{
             height: "auto",
             width: "100%", 
-            maxHeight: "480px",
+            maxHeight: "280px",
             maxWidth: "380px",
             margin: "10px", 
-            display: "block",             
+            display: "block",   
+            objectFit: "cover",
           }}
           src={photo.src.medium} 
           alt={photo.photographer}
