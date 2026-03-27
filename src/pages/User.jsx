@@ -1,6 +1,7 @@
 import { useState } from "react";
 import LoadingState from '../components/states/LoadingState';
-import ErrorState from '../components/states/ErrorState';import { loginUser } from "../services/authService";
+import ErrorState from '../components/states/ErrorState';
+import { loginUser } from "../services/authService";
 
 export default function User(){
   const [loginData, setLoginData] = useState(
