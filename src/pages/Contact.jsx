@@ -10,11 +10,11 @@ export default function Contact() {
    const [loading, setLoading] = useState(false);
    const [error, setError] = useState(null);
    const paragraphs = [
-    "Mangata & Gallo is a modern luxury brand dedicated to timeless design and refined craftsmanship. Founded with the vision of bringing together elegance and everyday wearability, our store offers a carefully curated selection of jewelry and clothing that celebrates both sophistication and individuality.",
+    "Mangata & Gallo is a modern luxury brand dedicated to timeless design and refined craftsmanship. Founded with the vision of bringing together elegance and everyday wearability, our store offers a carefully curated selection of jewelery and clothing that celebrates both sophistication and individuality.",
     "At Mangata & Gallo, we believe that style should feel effortless yet meaningful. Every piece we offer is chosen to help our customers express confidence, beauty, and personal identity through fashion."
    ]
    const paragraphs2 = [
-    "True luxury lies in the harmony between artistry and simplicity. Our collections are inspired by the idea that jewelry and clothing should complement one another, creating a complete expression of style.",
+    "True luxury lies in the harmony between artistry and simplicity. Our collections are inspired by the idea that jewelery and clothing should complement one another, creating a complete expression of style.",
     "From delicate necklaces and statement rings to finely crafted floral garments, Mangata & Gallo blends modern fashion with timeless elegance. Each item is designed to elevate everyday moments into something memorable."
    ]
    const title = [
@@ -70,6 +70,7 @@ if(error) return <ErrorState />
           style={{
             height: "auto",
             width: "100%", 
+            maxHeight: "480px",
             maxWidth: "380px",
             margin: "10px", 
             display: "block",             
