@@ -18,8 +18,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Navigate to="/home" replace />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/home" element={<Home  replace/>} />
+        <Route path="/products" element={<Products  replace/>} />
         <Route path="/category/:category" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
         <Route path='/user' element={<User />} />
