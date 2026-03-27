@@ -9,6 +9,8 @@ import Products from '../pages/products';
 import User from '../pages/User';
 import Bag from '../pages/Bag';
 import Jewelery from '../pages/Jewelery';
+import MensClothing from '../pages/MensClothing';
+import WomensClothing from '../pages/WomensClothing';
 
 function App() {
   return (
@@ -22,6 +24,11 @@ function App() {
         <Route path="/products" element={<Products />} />
 
         <Route path="/jewelery" element={<Jewelery />} />
+        <Route path="/men's clothing" element={<MensClothing />} />
+        <Route path="/women's clothing" element={<WomensClothing />} />
+
+
+
         {/* <Route path="/jewelery" element={<Navigate to="/products?category=jewelery" replace />}/>
         <Route path="/men's" element={<Navigate to="/products?category=men's clothing" replace />}/>
         <Route path="/women's clothing" element={<Navigate to="/products?category=women's clothing" replace />}/> */}

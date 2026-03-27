@@ -3,11 +3,11 @@ import { useParams } from "react-router-dom";
 import LoadingState from '../components/states/LoadingState';
 import ErrorState from '../components/states/ErrorState';
 import ProductCard from '../components/ProductCard';
-const API_BASE_URL = 'https://fakestoreapi.com/products/category/jewelery';
+const API_BASE_URL = 'https://fakestoreapi.com/products/category/women%27s%20clothing';
 import Banner from '../components/Banner';
 
-export default function Jewelery(){
-  const [jewelery, setJewelery] = useState([]); //products passes an array as the initial value
+export default function WomensClothing(){
+  const [womensClothing, setWomensClothing] = useState([]); //products passes an array as the initial value
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const {category} = useParams();
@@ -20,7 +20,7 @@ export default function Jewelery(){
 
         const response = await fetch(API_BASE_URL);
         const data = await response.json();
-        setJewelery(data);
+        setWomensClothing(data);
 
       } catch (error) {
         setError(error);
@@ -38,10 +38,10 @@ export default function Jewelery(){
   return (
     <div>
     <Banner  
-        title="Our Jewelery Collection"
+        title="Women's Clothing Collection"
         
-        subtitle="Our mission is to offer customers a refined shopping experience where jewelery compliment clothing in harmony." />
-    {jewelery.map((product) => (
+        subtitle="Our mission is to offer customers a refined shopping experience where women's clothing compliment accessories in harmony." />
+    {womensClothing.map((product) => (
       <section>
         <ProductCard key={product.id} product={product} />
       </section>
