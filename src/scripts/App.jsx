@@ -21,7 +21,6 @@ function App() {
         <Route path="/home" element={<Home  replace/>} />
         <Route path="/products" element={<Products  replace/>} />
         <Route path="/category/:category" element={<Products />} />
-        <Route path="/category/:jewelery" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
         <Route path='/user' element={<User />} />
         <Route path='/bag' element={<Bag />} />
