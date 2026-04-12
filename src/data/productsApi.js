@@ -1,12 +1,9 @@
 const API_BASE_URL = 'https://fakestoreapi.com';
 
 const CATEGORY_GROUPS = {
-  jewelry: 'jewelery',
   jewelery: 'jewelery',
   men: "men's clothing",
-  "men's clothing": "men's clothing",
   women: "women's clothing",
-  "women's clothing": "women's clothing",
 };
 
 const SUBCATEGORY_KEYWORDS = {

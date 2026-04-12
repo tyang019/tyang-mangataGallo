@@ -5,6 +5,7 @@ import ErrorState from '../components/states/ErrorState';
 import ProductCard from '../components/ProductCard';
 const API_BASE_URL = 'https://fakestoreapi.com/products/category/men%27s%20clothing';
 import Banner from '../components/Banner';
+import mensData from '../data/mensClothing.json'
 
 export default function MensClothing(){
   const [mensClothing, setMensClothing] = useState([]); //products passes an array as the initial value
@@ -18,9 +19,10 @@ export default function MensClothing(){
         setLoading(true);
         setError(null);
 
-        const response = await fetch(API_BASE_URL);
-        const data = await response.json();
-        setMensClothing(data);
+        // const response = await fetch(API_BASE_URL);
+        // const data = await response.json();
+        // setMensClothing(data);
+        setMensClothing(mensData);
 
       } catch (error) {
         setError(error);

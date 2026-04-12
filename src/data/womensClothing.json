@@ -1,0 +1,23 @@
+[
+  {
+    "id": 15,
+    "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
+    "price": 56.99,
+    "category": "women's clothing",
+    "image": "https://picsum.photos"
+  },
+  {
+    "id": 16,
+    "title": "Lock and Love Women's Removable Hooded Jacket",
+    "price": 29.95,
+    "category": "women's clothing",
+    "image": "https://picsum.photos"
+  },
+  {
+    "id": 17,
+    "title": "Rainy Days Women's Windbreaker",
+    "price": 39.99,
+    "category": "women's clothing",
+    "image": "https://picsum.photos"
+  }
+]

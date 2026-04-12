@@ -1,0 +1,23 @@
+[
+  {
+    "id": 5,
+    "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+    "price": 695,
+    "category": "jewelery",
+    "image": "/assets/jewelery1.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Solid Gold Petite Micropave",
+    "price": 168,
+    "category": "jewelery",
+    "image": "/assets/jewelery2.jpg"
+  },
+  {
+    "id": 7,
+    "title": "White Gold Plated Princess",
+    "price": 9.99,
+    "category": "jewelery",
+    "image": "/assets/jewelery3.jpg"
+  }
+]
